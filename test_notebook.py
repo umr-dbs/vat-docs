@@ -2,8 +2,9 @@
 
 '''Convert Jupyter Notebooks to Markdown files.'''
 
-import sys
 import argparse
+import sys
+import warnings
 from nbconvert import PythonExporter
 import nbformat
 
@@ -41,13 +42,15 @@ def run_script(script: str) -> bool:
     '''Run the script.'''
 
     try:
-        # pylint: disable-next=exec-used
-        exec(script)
+        with warnings.catch_warnings(record=True):
+            # pylint: disable-next=exec-used
+            exec(script)
 
+        eprint("SUCCESS")
         return True
 
     except Exception as error: # pylint: disable=broad-exception-caught
-        eprint("Error running script:", error)
+        eprint("ERROR:", error)
         return False
 
 if __name__ != '__main__':
@@ -57,6 +60,7 @@ INPUT_FILE = parse_args()
 
 python_script = convert_to_python(INPUT_FILE)
 
+eprint(f"Running script `{INPUT_FILE}`", end=': ')
 if run_script(python_script):
     sys.exit(0)
 else:

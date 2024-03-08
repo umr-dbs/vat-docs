@@ -6,7 +6,7 @@ import os
 import sys
 import argparse
 from dataclasses import dataclass
-from typing import List, Tuple
+from typing import List
 import base64
 from nbconvert import MarkdownExporter
 import nbformat
@@ -15,7 +15,7 @@ def eprint(*args, **kwargs):
     '''Print to stderr.'''
     print(*args, file=sys.stderr, **kwargs)
 
-def parse_args() -> Tuple[str, str]:
+def parse_args() -> str:
     '''Parse command-line arguments.'''
 
     parser = argparse.ArgumentParser(
@@ -26,13 +26,8 @@ def parse_args() -> Tuple[str, str]:
         'filename',
         help='The Jupyter Notebook file to convert.'
     )
-    parser.add_argument(
-        '-o', '--output-dir',
-        required=False,
-        help='The output directory for supporting image files.'
-    )
     parameters = parser.parse_args()
-    return parameters.filename, parameters.output_dir
+    return parameters.filename
 
 def create_images_directory(output_directory: str, input_file: str) -> str:
     '''Create the directory for supporting image files.'''
@@ -74,17 +69,14 @@ def replace_image_links(body: str, outputs: List[Output]) -> str:
 
     return modified_body
 
-def convert_to_markdown(input_file: str, output_directory: str) -> Tuple[str, List[Output]]:
+def convert_to_markdown(input_file: str) -> str:
     '''Convert the Jupyter Notebook to a Markdown file.'''
 
     exporter = MarkdownExporter()
 
     notebook = nbformat.read(input_file, as_version=4)
 
-    (body, resources) = exporter.from_notebook_node(
-        notebook,
-        resources={'output_files_dir': os.path.join(output_directory)}
-    )
+    (body, resources) = exporter.from_notebook_node(notebook)
 
     outputs = [
         Output(name=output_key, content=resources['outputs'][output_key])
@@ -92,20 +84,20 @@ def convert_to_markdown(input_file: str, output_directory: str) -> Tuple[str, Li
         in resources['outputs']
     ]
 
-    return replace_image_links(body, outputs), outputs
+    return replace_image_links(body, outputs)
 
 
 if __name__ != '__main__':
     sys.exit(0)
 
-INPUT_FILE, OUTPUT_DIRECTORY = parse_args()
+INPUT_FILE = parse_args()
 
 eprint(f'Converting `{INPUT_FILE}` to Markdown...')
-eprint(f'Storing supporting image files in `{OUTPUT_DIRECTORY}`...')
+# eprint(f'Storing supporting image files in `{OUTPUT_DIRECTORY}`...')
 
-image_directory = create_images_directory(OUTPUT_DIRECTORY, INPUT_FILE)
+# image_directory = create_images_directory(OUTPUT_DIRECTORY, INPUT_FILE)
 
-markdown, image_outputs = convert_to_markdown(INPUT_FILE, image_directory)
+markdown = convert_to_markdown(INPUT_FILE)
 
 # Write Markdown to stdout
 print(markdown)
