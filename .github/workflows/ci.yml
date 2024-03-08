@@ -23,6 +23,10 @@ jobs:
         with:
           mdbook-version: "0.4.37"
 
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
       - name: Build
         run: mdbook build
 
