@@ -1,0 +1,18 @@
+[book]
+authors = ["Christian Beilschmidt <christian.beilschmidt@geoengine.de>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "VAT User Documentation"
+
+[rust]
+edition = "2021"
+
+[preprocessor.examples]
+command = "python3 preprocess.py"
+
+[output.html]
+theme = "theme"
+default-theme = "vat"
+preferred-dark-theme = "vat"
+mathjax-support = true

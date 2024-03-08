@@ -1,0 +1,7 @@
+book
+
+# IDE
+.vscode
+
+# Python virtual environment
+env/
