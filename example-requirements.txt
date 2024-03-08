@@ -1,0 +1,3 @@
+altair==5.2.0
+geoengine-openapi-client==0.0.4
+geoengine @ git+https://github.com/geo-engine/geoengine-python.git@bc67e2cb0728d4a314483e899696e5bc2fe7bb10#egg=geoengine

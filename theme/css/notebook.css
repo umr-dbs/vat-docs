@@ -1,0 +1,4 @@
+table.dataframe {
+  overflow-x: scroll;
+  display: block;
+}

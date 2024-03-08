@@ -28,3 +28,21 @@ jobs:
 
       - name: Run tests
         run: mdbook test
+
+  examples:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8" # minimum supported version
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r example-requirements.txt
+      - name: Run examples
+        run: |
+          for notebook in src/examples/*.ipynb; do
+            python3 test_notebook.py $notebook
+          done

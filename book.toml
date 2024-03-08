@@ -16,3 +16,5 @@ theme = "theme"
 default-theme = "vat"
 preferred-dark-theme = "vat"
 mathjax-support = true
+no-section-label = true
+additional-css = ["theme/css/notebook.css"]
