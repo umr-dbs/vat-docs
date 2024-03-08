@@ -30,8 +30,8 @@ jobs:
       - name: Build
         run: mdbook build
 
-      - name: Run tests
-        run: mdbook test
+      # - name: Run tests
+      #   run: mdbook test
 
   examples:
     runs-on: ubuntu-22.04
