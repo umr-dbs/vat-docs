@@ -55,15 +55,20 @@ def png_to_data_uri(output: Output) -> str:
 
     return dataurl
 
-def replace_image_links(body: str, outputs: List[Output]) -> str:
+def modify_markdown(body: str, outputs: List[Output]) -> str:
     '''Replace image links in the Markdown body with data URIs.'''
+
 
     modified_body = ""
     for body_line in body.splitlines():
-        if body_line.startswith('!['): # replace image links with data URIs
+        if body_line.startswith('!['):
+            # replace image links with data URIs
             for output in outputs:
                 if body_line.find(output.name) != -1:
                     modified_body += f'![{output.name}]({png_to_data_uri(output)})\n'
+        elif body_line.startswith('<div id="altair-'):
+            # add an additional newline between div and script tags
+            modified_body += body_line + '\n\n'
         else:
             modified_body += body_line + '\n'
 
@@ -84,7 +89,7 @@ def convert_to_markdown(input_file: str) -> str:
         in resources['outputs']
     ]
 
-    return replace_image_links(body, outputs)
+    return modify_markdown(body, outputs)
 
 
 if __name__ != '__main__':
