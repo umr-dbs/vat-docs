@@ -4,19 +4,21 @@
 
 # Background
 
-- [The VAT System]()
-- [The Geo Engine]()
-- [FAQ]()
+- [The VAT System](./vat.md)
+- [The Geo Engine](./geo-engine.md)
+- [FAQ](./faq.md)
 - [Get in touch](./get-in-touch.md)
 
 # User Guide
 
-- [Important Features]()
-  - [Operator Toolbox]()
+- [Important Features](./features/README.md)
+  - [Operator Toolbox](./features/operator-toolbox.md)
+  - [Python Library](./features/python-library.md)
   - [Search Integration]()
   - [ABCD Archive Connection]()
-  - [Important features]()
-  - [GBIF Data & Search]()
+  - [GBIF Data & Search](./features/gbif.md)
 - [Examples](./examples/README.md)
   - [Canis lupus meets Felis silvestris](./examples/Canis_lupus_meets_Felis_silvestris.ipynb)
+- [Video Tutorials](./videos/README.md)
+  - [Canis lupus meets Felis silvestris](./videos/pilot-1.md)
 - [Updates & Changes]()

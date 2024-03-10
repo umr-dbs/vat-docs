@@ -8,8 +8,8 @@ title = "VAT User Documentation"
 [rust]
 edition = "2021"
 
-[preprocessor.examples]
-command = "python3 preprocess.py"
+[preprocessor.ipynb]
+command = "python3 preprocess-ipynb.py"
 
 [output.html]
 theme = "theme"
