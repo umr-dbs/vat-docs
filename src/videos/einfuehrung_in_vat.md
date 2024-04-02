@@ -1,4 +1,4 @@
-# Einführung in VAT
+# Einfuehrung in VAT
 
 ## Video
 
