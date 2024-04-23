@@ -8,52 +8,53 @@
 
 ## Summary
 
-Welcome to the Use-Case Canis lupus meets Felis silvestris.
+Welcome to the Canis lupus meets Felis silvestris use case.
 
-In this example the GBIF occurence data of Canis lupus and Felis silvestris will be cut to the extent of Germany and joined by the landuse classification of the Oekosystematlas.
+In this example the GBIF occurrence data of Canis lupus and Felis silvestris are cut to the extent of Germany and linked to the land use classification of the Ecosystematlas.
 
 <img src="images/canis_lupus_meets_felis_silvestris_1.png" width="100%" height="auto" alt="Introduction image VAT overview">
 
-To begin, we select the data catalog in the top right corner. In here we have multiple data catalogs to choose from.
+To begin, we select the Data Catalogue in the top right-hand corner. Here we have several data catalogues to choose from.
 
 <img src="images/canis_lupus_meets_felis_silvestris_2.png" width="50%" height="auto" alt="Sidebar with data catalogs">
 
-In our case we start with searching for the individual species in the GBIF data provider. Via the search function it is easy to find the species, so we search for _Canis lupus_ and loading the dataset by selecting it.
+In our case, we start by searching for the individual species in the GBIF data provider. The search function makes it easy to find the species, so we search for _Canis lupus_ and load the dataset by selecting it.
 
 <img src="images/canis_lupus_meets_felis_silvestris_3.png" width="50%" height="auto" alt="Canis lupus search">
 
-For the spatial selection we also need the German boundaries, which we found using the search function in the data catalog, searching for _Germany_.
+For the spatial selection we also need the German borders, which we found by searching for _Germany_ in the data catalogue.
 
 <img src="images/canis_lupus_meets_felis_silvestris_4.png" width="50%" height="auto" alt="Germany search">
 
-For the linkage between the occurence data and the land use classification it is also necessary to load in the _Oekosystematlas_ by searching for it in the Personal data catalog. The personal data catalog contains all datasets, which the user uploads as well as a section with _All Datasets_ which also contains not listed datasets.
+In order to link the occurrence data with the land use classification, it is also necessary to load the _Oekosystematlas_ by searching for it in the personal data catalogue. The personal data catalogue contains all datasets uploaded by the user as well as a section with _all datasets_, which also contains datasets not listed.
 
 <img src="images/canis_lupus_meets_felis_silvestris_5.png" width="50%" height="auto" alt="Oekosystematlas search">
 
-The next step takes place in the operator section, which can be found in the top right corner.
+The next step takes place in the Operators section, located in the top right-hand corner.
 
-First we use a _Point in Polygon Filter_ to limit our occurence data to Germany. For a better readability it is recommended to name the datasets.
+First we use a _Point in Polygon Filter_ to restrict our occurrence data to Germany. For better readability it is recommended to name the datasets.
 
 <img src="images/canis_lupus_meets_felis_silvestris_6.png" width="50%" height="auto" alt="Point in Polygon Filter">
 
-Next we join the raster data to the vector data using the _Raster Vector Join Operator_, which takes the occurence data as vector and the Oekosystematlas as raster data.
+Next, we join the raster data to the vector data using the _Raster Vector Join Operator_, which takes the occurrence data as a vector and the Ecosystem Atlas as raster data.
 
 <img src="images/canis_lupus_meets_felis_silvestris_7.png" width="50%" height="auto" alt="Raster Vector Join">
 
-The result is the vector data joined by the raster data spatially by the position. Therefore a new column in the data table of the vector data is added containing the information.
+The result is that the vector data is spatially linked to the raster data by position. Therefore, a new column is added to the vector data table containing the information.
 
 <img src="images/canis_lupus_meets_felis_silvestris_8.png" width="100%" height="auto" alt="Data table Canis lupus oekosystematlas">
 
-To visualize classified data it is recommended to use the _Class Histogram_ operator, which translate the numbers of the Oekosystematlas into the respective class names using the metadata.
+To visualise the classified data, it is recommended to use the _Class Histogram_ operator, which translates the Ecosystem Atlas numbers into class names using the metadata.
 
 <img src="images/canis_lupus_meets_felis_silvestris_9.png" width="50%" height="auto" alt="Class histogram">
 
-The plot then shows the respective distribution of the occurences in dependence of the respective class.
+The graph then shows the distribution of occurrences according to class.
 
-Using the same workflow for _Felis silvestris_ it is possible to compare the occurences between the two species.
+Using the same procedure for _Felis silvestris_, it is possible to compare the occurrence of the two species.
 
 <img src="images/canis_lupus_meets_felis_silvestris_10.png" width="100%" height="auto" alt="Overview Canis lupus Felis sivestris final">
 
-**Warning**: The VAT system is mainly for data exploration. When changing the visual map extent, the workflow will be recalculated and the results therefore could be changed! This needs to be considered, when working with the VAT system scientifically. In the bottom left corner also now a new window. This window must be given when working scientifically with the VAT system as it allows for reproducability!
+**Warning**: The VAT system is mainly used for data exploration. Changing the extent of the visual map will recalculate the workflow and could change the results! This must be taken into account when working scientifically with the VAT system. There is also a new window in the bottom left corner. This window must be present when working scientifically with the VAT system, as it allows reproducibility!
 
-**Tip**: The layers have several options. They can be downloaded to work with the data in other systems. The layers also always have a workflow tree and the _workflow_id_ can be copied to import the workflow in Python directly.
+**Tip**: The layers have several options. They can be downloaded to work with the data in other systems. The layers also always have a workflow tree and the _workflow_id_ can be copied to import the workflow directly into Python.
+
