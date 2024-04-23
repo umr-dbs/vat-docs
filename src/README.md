@@ -2,7 +2,7 @@
 
 ### Welcome to the VAT Documentation
 
-The VAT Documentation is the first point of contact for questions relating to VAT. Therefore this documentation explains then Backgrounds and the Functionality in the User Guide section. This documentation also gives relevant links in order to find the resources to answer problems. 
+The VAT documentation is the first point of contact for VAT-related questions. Therefore, this documentation first covers the basics of the system in the Background section and then the functionality with examples in the User Guide section. This documentation also provides relevant links to find the resources to answer your questions. 
 
 
 
