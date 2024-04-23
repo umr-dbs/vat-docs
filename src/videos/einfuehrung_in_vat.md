@@ -34,7 +34,7 @@ In the middle of the top bar is the time step selector. When viewing spatio-temp
 
 <img src="images/einfuehrung_in_vat_5.png" width="50%" height="auto" alt="Time step selector">
 
-In the riOn the top bar you will find a series of icons, which we will visit next.
+On the top bar you will find a series of icons, which we will visit next.
 
 The first icon is the Account menu. Here you can log in with your GFBio account, which allows you to upload files or create, save or export a project. It also shows the session token, which can be used in Python to visit loaded files.
 
