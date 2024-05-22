@@ -1,3 +1,10 @@
-altair==5.2.0
-geoengine-openapi-client==0.0.4
-geoengine @ git+https://github.com/geo-engine/geoengine-python.git@bc67e2cb0728d4a314483e899696e5bc2fe7bb10#egg=geoengine
+-e git+https://github.com/geo-engine/geoengine-python.git@6972ee2e5d6ab676d46a8447230e1c609b624f5d#egg=geoengine
+altair==5.3.0
+geoengine_openapi_client==0.0.4
+geopandas==0.14.3
+matplotlib==3.7.5
+nest_asyncio==1.6.0
+numpy==1.26.4
+pandas==1.5.3
+scikit_learn==1.4.2
+xarray==2024.2.0
