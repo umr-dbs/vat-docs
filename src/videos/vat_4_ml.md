@@ -1,5 +1,7 @@
 # VAT 4 ML - Creating Training data for a species distribution model
 
+This workflow is a contribution to the NFDI4Earth conference.
+
 ## Video
 
 The video for this use case is coming soon!
