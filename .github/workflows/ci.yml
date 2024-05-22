@@ -43,7 +43,8 @@ jobs:
           python-version: "3.10" # minimum supported version
       - name: Install system requirements
         run: |
-          sudo apt install -y libgeos-dev
+          apt update
+          apt install -y libgeos++-dev
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
