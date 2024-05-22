@@ -44,7 +44,7 @@ def run_script(script: str) -> bool:
     try:
         with warnings.catch_warnings(record=True):
             # pylint: disable-next=exec-used
-            exec(script)
+            exec(script, {})
 
         eprint("SUCCESS")
         return True
