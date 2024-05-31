@@ -17,7 +17,7 @@
   - [Search Integration]()
   - [ABCD Archive Connection]()
   - [GBIF Data & Search](./features/gbif.md)
-- [Examples](./videos/README.md)
+- [Examples](./instructions/README.md)
   - [Introduction to VAT](./instructions/einfuehrung_in_vat.md)
   - [Canis lupus meets Felis silvestris](./instructions/canis_lupus_meets_felis_silvestris.md)
   - [On dry land](./instructions/auf_dem_trockenen.md)
