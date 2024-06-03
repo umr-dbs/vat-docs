@@ -66,7 +66,7 @@ To create the prediction data, we then use the *Raster Stacker* operator to crea
 
 <img src="images/vat_4_ml_12.png" width="50%" height="auto" alt="Raster Stacker operator">
 
-This brings us to the Arnica montana training data and the stacked prediction grid data.
+This brings us to the *Arnica montana* training data and the stacked prediction grid data.
 
 <img src="images/vat_4_ml_13.png" alt="Overview of the map with the training and prediction data as well as all other layer visually hidden">
 

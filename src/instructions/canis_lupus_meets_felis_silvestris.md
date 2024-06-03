@@ -1,4 +1,4 @@
-# Canis lupus meets Felis silvestris
+# *Canis lupus* meets *Felis silvestris*
 
 ## Video
 
@@ -8,9 +8,9 @@
 
 ## Summary
 
-Welcome to the Canis lupus meets Felis silvestris use case.
+Welcome to the *Canis lupus* meets *Felis silvestris* use case.
 
-In this example the GBIF occurrence data of Canis lupus and Felis silvestris are cut to the extent of Germany and linked to the land use classification of the Ecosystematlas.
+In this example the GBIF occurrence data of *Canis lupus* and *Felis silvestris* are cut to the extent of Germany and linked to the land use classification of the Ecosystematlas.
 
 <img src="images/canis_lupus_meets_felis_silvestris_1.png" width="100%" height="auto" alt="Introduction image VAT overview">
 

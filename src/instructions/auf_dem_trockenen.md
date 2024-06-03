@@ -10,7 +10,7 @@
 
 Welcome to the Dry Land Use Case.
 
-In this example, the GBIF occurrence data of Calopteryx splendens are clipped to the extent of Germany and merged with the land use classification from the Oekosystematlas as well as a time of average temperature provided by the WorldClim dataset.
+In this example, the GBIF occurrence data of *Calopteryx splendens* are clipped to the extent of Germany and merged with the land use classification from the Oekosystematlas as well as a time of average temperature provided by the WorldClim dataset.
 
 <img src="images/auf_dem_trockenen_1.png" width="100%" height="auto" alt="Introduction image VAT overview">
 
