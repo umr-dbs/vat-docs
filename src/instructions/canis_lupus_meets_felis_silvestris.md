@@ -1,6 +1,6 @@
 # *Canis lupus* meets *Felis silvestris*
 
-**++ Currently, the examples will be reworked after the latest update because GBIF behaves differently now. Find out more: [https://docs.vat.gfbio.org/updates/updates_and_changes.html](https://docs.vat.gfbio.org/updates/updates_and_changes.html) ++**
+**++ Currently, the examples are being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
 
 ## Video
 
