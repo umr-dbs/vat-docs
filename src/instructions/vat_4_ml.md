@@ -1,5 +1,7 @@
 # VAT 4 ML - Creating Training data for a species distribution model
 
+**++ Currently, the examples are being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
+
 This workflow is a contribution to the NFDI4Earth conference.
 
 ## Video

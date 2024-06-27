@@ -27,4 +27,4 @@
   - [Canis lupus meets Felis silvestris](./examples/Canis_lupus_meets_Felis_silvestris.ipynb)
   - [On dry land](./examples/Auf_dem_Trockenen.ipynb)
   - [VAT 4 Machine Learning](./examples/VAT_4_ML.ipynb)
-- [Updates & Changes]()
+- [Updates & Changes](./updates/updates_and_changes.md)
