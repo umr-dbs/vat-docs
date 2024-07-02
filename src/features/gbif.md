@@ -1,10 +1,19 @@
-# GBIF Search
+# GBIF Data & Search
 
 ![Select GBIF](media/select-gbif.png)
 
-The VAT system provides access to regular dumps of the GBIF occurrence data.
+The VAT system provides access to a snapshot of the GBIF occurrence data.
 This allows users to easily access GBIF data without having to download the data themselves.
 In addition, they can map the data together with other data sources in the VAT system.
+
+The GBIF snapshot contains all occurrences available at [gbif.org](https://www.gbif.org) at the time of the snapshot. The snapshot date is noted in the GBIF data provider description (see *Add Data* dialog above).
+Since data in VAT is spatio-temporal, we filter the occurrences by three conditions:
+1. They have a coordinate
+2. They have no geospatial issues
+3. They have an event time
+
+All occurrences fulfilling these three conditions are imported into a [PostgreSQL](https://www.postgresql.org/) database and indexed by time and space (using the [PostGIS extension](https://postgis.net/)), as well as family, genus and species names.
+To enable browsing along the taxonomic hierarchy, we additionally import GBIF's [backbone taxonomy](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c). We also retrieve the citations for all datasets through the [registry API endpoint](https://techdocs.gbif.org/en/openapi/v1/registry) to be able to compile them according to GBIF's [citation guidelines](https://www.gbif.org/citation-guidelines) for a set of filtered occurrences.  
 
 ![GBIF groups](media/gbif-groups.png)
 
