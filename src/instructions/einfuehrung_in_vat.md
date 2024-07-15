@@ -1,11 +1,9 @@
 # Introduction to VAT
 
-**++ Currently, the examples are being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
-
 ## Video
 
 <div style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wtGskNfGV_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jQosJQ9JzcE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Summary
@@ -72,53 +70,57 @@ First we go to the data selection menu and search for _Aeshna affinis_ in the GB
 
 <img src="images/einfuehrung_in_vat_13.png" width="50%" height="auto" alt="GBIF Search">
 
-To link the occurrence data with the mean temperature, we search for the _Minimum Temperature_ dataset in the data catalogue.
+**Warning:** Note that the GBIF data is spatio-temporal data. This means that a time period must be requested with an end date different from the start date.
 
 <img src="images/einfuehrung_in_vat_14.png" width="50%" height="auto" alt="Minimum temperature search">
 
-The _Minimum Temperature_ dataset is a spatio-temporal dataset and therefore has a spatial and temporal extent. This can be found in the metadata of the dataset.
+Therefore, we need to change the time configuration in the respective menu by selecting a different end date, while we can also change the number of time steps according to the selected time period.
 
 <img src="images/einfuehrung_in_vat_15.png" width="50%" height="auto" alt="Minimum temperature spatiotemporal extent">
 
-To adjust the time range, change the time in the time configuration menu.
+As spatio-temporal raster data, we add the CHELSA climatologies, which represent the average of the last 30-year climate period.
 
 <img src="images/einfuehrung_in_vat_16.png" width="50%" height="auto" alt="Minimum temperature time configuration">
 
-We also load the _Maximum Temperature_ dataset.
+So we load the *Mean daily air temperature* because the temperature is related to the distribution of *Aeshna affinis*.
 
 <img src="images/einfuehrung_in_vat_17.png" width="50%" height="auto" alt="Maximum temperature search">
 
-As the visual appearence of the temperature datasets are not appealing, we change the symbology of the raster layer.
+In the layers menu we can now rearrange the layers and even change the symbology if we wish.
 
 <img src="images/einfuehrung_in_vat_18.png" width="50%" height="auto" alt="Edit symbology button">
 
-When we clicked on _Edit Symbology_ we were taken to the Edit Symbology menu. Here we scroll down, select a different colour map such as _VIRIDIS_ or _MAGMA_ and click on _Create colour map_. Finally, we confirm the change with the _Apply_ button at the bottom of the menu.
+For once, we can change the clustering and the symbology of vector data.
 
 <img src="images/einfuehrung_in_vat_19.png" width="50%" height="auto" alt="Edit symbology menu">
 
-After loading the data, we want to spatially join the occurrence data of _Aeshna affinis_ with the _Minimum Temperature_ and _Maximum Temperature_ datasets using the raster vector join operator. For better readability it is recommended to name the datasets.
+We can also change the representation of the vector data by clicking on _Edit Symbology_. Here we scroll down, select another color map such as _VIRIDIS_ or _MAGMA_ and click on _Create Color Map_. Finally, we confirm the change with the _Apply_ button at the bottom of the menu.
 
 <img src="images/einfuehrung_in_vat_20.png" width="50%" height="auto" alt="Raster Vector Join">
 
+After loading the data, we want to spatially join the occurrence data of _Aeshna affinis_ with the *Mean daily air temperature* datasets using the raster vector join operator. For better readability, it is recommended to name the datasets.
+
+<img src="images/einfuehrung_in_vat_21.png" width="50%" height="auto" alt="Data table Aeshna affinis oekosystematlas">
+
 The result is that the vector data is spatially linked to the raster data by position. Therefore, new columns are added to the vector data table containing the information.
 
-<img src="images/einfuehrung_in_vat_21.png" width="100%" height="auto" alt="Data table Aeshna affinis oekosystematlas">
+<img src="images/einfuehrung_in_vat_22.png" width="100%" height="auto" alt="Histogram">
 
 The _Histogram_ operator can be used to visualise the distribution of occurrence data as a function of temperature.
 
-<img src="images/einfuehrung_in_vat_22.png" width="50%" height="auto" alt="Histogram">
+<img src="images/einfuehrung_in_vat_23.png" width="50%" height="auto" alt="Overview Aeshna affinis final">
 
-The graphs then show the distribution of occurrences of _Aeshna affinis_ as a function of the minimum and maximum temperatures on 1 January 1990.
+The graph then show the distribution of occurrences of _Aeshna affinis_ as a function of the average temperatures in relation to the respective temporal raster.
 
-<img src="images/einfuehrung_in_vat_23.png" width="100%" height="auto" alt="Overview Aeshna affinis final">
+<img src="images/einfuehrung_in_vat_24.png" width="100%" height="auto" alt="Download layer button">
 
 When you are finished manipulating the data, you can download the raster data as a .tif file and the vector data as a .shp file from the layer selection menu.
 
-<img src="images/einfuehrung_in_vat_24.png" width="50%" height="auto" alt="Download layer button">
+<img src="images/einfuehrung_in_vat_25.png" width="50%" height="auto" alt="Show Provenance data table">
 
 In the menu it is also possible to display the origin, which will then appear in the data table area at the bottom of the VAT.
 
-<img src="images/einfuehrung_in_vat_25.png" width="100%" height="auto" alt="Show Provenance data table">
+<img src="images/einfuehrung_in_vat_26.png" width="100%" height="auto" alt="Show Provenance data table">
 
 This was the first introductory tour of the VAT system. If you want to learn more, you can do so by watching the videos or exploring the use cases in this documentation.
 

@@ -1,6 +1,6 @@
 # *Canis lupus* meets *Felis silvestris*
 
-**++ Currently, the examples are being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
+**++ Currently, this examples is being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
 
 ## Video
 
@@ -59,4 +59,3 @@ Using the same procedure for _Felis silvestris_, it is possible to compare the o
 **Warning**: The VAT system is mainly used for data exploration. Changing the extent of the visual map will recalculate the workflow and could change the results! This must be taken into account when working scientifically with the VAT system. There is also a new window in the bottom left corner. This window must be present when working scientifically with the VAT system, as it allows reproducibility!
 
 **Tip**: The layers have several options. They can be downloaded to work with the data in other systems. The layers also always have a workflow tree and the _workflow_id_ can be copied to import the workflow directly into Python.
-

@@ -1,6 +1,6 @@
 # VAT 4 ML - Creating Training data for a species distribution model
 
-**++ Currently, the examples are being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
+**++ Currently, this example is being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
 
 This workflow is a contribution to the NFDI4Earth conference.
 
@@ -56,7 +56,7 @@ We start to create the training data and prepare the prediction data by aggregat
 
 <img src="images/vat_4_ml_9.png" width="50%" height="auto" alt="Temporal raster aggregation operator">
 
-In a second step, we spatially filter the GBIF occurrence data of *Arnica montana* using the _Point in Polygon Filter_ to restrict our occurrence data to Germany. 
+In a second step, we spatially filter the GBIF occurrence data of *Arnica montana* using the _Point in Polygon Filter_ to restrict our occurrence data to Germany.
 
 <img src="images/vat_4_ml_10.png" width="50%" height="auto" alt="point in polygon operator">.
 
@@ -80,7 +80,7 @@ In Jupyter Notebook, we can use the geoengine package to first initialise the VA
 
 <img src="images/vat_4_ml_15.png" alt="Jupyter Notebook code used to train the species distribution model">
 
-After model training we can import the prediction data workflow. The best RandomForestRegressor model is used for the final prediction 
+After model training we can import the prediction data workflow. The best RandomForestRegressor model is used for the final prediction
 
 <img src="images/vat_4_ml_16.png" alt="Jupyter Notebook code used to predict using the trained species distribution model">
 
@@ -90,4 +90,4 @@ Finally, the result is plotted using the matplotlib package.
 
 <img src="images/vat_4_ml_18.png" alt="The plot, showing three maps, two with the distribution and one with the distribution of the training data">
 
-Although the model did not show the best performance, it was possible to show how easy it is to create spatio-temporal training data for machine learning applications using the VAT and exporting the data directly into Python, where it can be used in typical formats such as geopandas GeoDataFrame or xarray DataArray. 
+Although the model did not show the best performance, it was possible to show how easy it is to create spatio-temporal training data for machine learning applications using the VAT and exporting the data directly into Python, where it can be used in typical formats such as geopandas GeoDataFrame or xarray DataArray.
