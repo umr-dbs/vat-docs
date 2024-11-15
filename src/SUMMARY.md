@@ -14,7 +14,7 @@
 - [Important Features](./features/README.md)
   - [Operator Toolbox](./features/operator-toolbox.md)
   - [Python Library](./features/python-library.md)
-  - [Search Integration]()
+  - [Search Integration](./features/search-integration.md)
   - [ABCD Archive Connection]()
   - [GBIF Data & Search](./features/gbif.md)
 - [Examples](./instructions/README.md)
