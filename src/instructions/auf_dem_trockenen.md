@@ -12,7 +12,7 @@
 
 Welcome to the Dry Land Use Case.
 
-In this example, the GBIF occurrence data of *Calopteryx splendens* are clipped to the extent of Germany and merged with the land use classification from the Oekosystematlas as well as a time of average temperature provided by the WorldClim dataset.
+In this example, the GBIF occurrence data of *Calopteryx splendens* are clipped to the extent of Germany and merged with the land use classification from the IÖR land use classification as well as aggregating daily resolved average temperature data provided by the German weather service (DWD).
 
 <img src="images/auf_dem_trockenen_1.png" width="100%" height="auto" alt="Introduction image VAT overview">
 
@@ -28,27 +28,19 @@ For the spatial selection we also need the German border, which we found by sear
 
 <img src="images/auf_dem_trockenen_4.png" width="50%" height="auto" alt="Germany search">
 
-Next, for the link between the occurrence data and the average temperature, we search for the _Average Temperature_ dataset in the data catalogue.
+Next, for the link between the occurrence data and the average temperature, we search for the _Daily mean air temperature_ dataset in the data catalogue.
 
 <img src="images/auf_dem_trockenen_5.png" width="50%" height="auto" alt="Average temperature search">
 
-**Caution**: The _Average Temperature_ is a spatio-temporal dataset. Always check the spatial and temporal extent in the metadata.
+**Caution**: The _Daily mean air temperature_ is a spatio-temporal dataset. Always check the spatial and temporal extent in the metadata.
 
 <img src="images/auf_dem_trockenen_6.png" width="50%" height="auto" alt="Average temperature spatiotemporal extent">
 
-The _Average Temperature_ dataset covers the whole Earth and a time range from 1970/01/01 to 2000/12/31. To do this we need to change the time in the time menu at the top right.
+The *Daily mean air temperature* dataset covers Germany with a time range from 1951/01/01 to 2021/01/01 in a daily resolution. To see an effect on the data it is recommended to change the time in the time menu at the top right due to the high spatiotemporal resolution of the temperature data.
 
 <img src="images/auf_dem_trockenen_7.png" width="50%" height="auto" alt="Time menu">
 
-As the dataset does not look very attractive, we will change the colour palette of the raster data. This can be done by right-clicking on the layer and selecting _Edit Symbology_.
-
-<img src="images/auf_dem_trockenen_8.png" width="50%" height="auto" alt="Edit symbology button">
-
-In the symbology menu, scroll down to _Create colour table_, select a colour map such as _VIRIDIS_ or _MAGMA_, click the _Create colour table_ button and confirm with the _Apply button_ at the bottom of the symbology menu.
-
-<img src="images/auf_dem_trockenen_9.png" width="50%" height="auto" alt="Edit symbology menu">
-
-In order to link the occurrence data with the land use classification, it is also necessary to load the _Oekosystematlas_ by searching for it in the personal data catalogue. The personal data catalogue contains all datasets uploaded by the user as well as a section with _all datasets_, which also contains datasets not listed.
+In order to link the occurrence data with the land use classification, it is also necessary to load the _IÖR Landschaftsklassifikation_ by searching for it in the data catalogue.
 
 <img src="images/auf_dem_trockenen_10.png" width="50%" height="auto" alt="Oekosystematlas search">
 
@@ -58,7 +50,11 @@ First we use a _Point in Polygon Filter_ to restrict our occurrence data to Germ
 
 <img src="images/auf_dem_trockenen_11.png" width="50%" height="auto" alt="Point in Polygon filter">
 
-Next, we join the raster data to the vector data using the _Raster Vector Join Operator_, which takes the occurrence data as a vector and the Ecosystem Atlas and Mean Temperature as raster data.
+As the Daily mean air temperature has such a high temporal resolution we want to convert it into a more handable and more interpretable monthly time resolution using the _Temporal Raster Aggregation Operator_.  
+
+<img src="images/auf_dem_trockenen_8.png" width="50%" height="auto" alt="Raster Vector Join">
+
+Next, we join the raster data to the vector data using the _Raster Vector Join Operator_, which takes the occurrence data as a vector and the IÖR Landschaftsklassifikation and Monthly mean air temperature as raster data.
 
 <img src="images/auf_dem_trockenen_12.png" width="50%" height="auto" alt="Raster Vector Join">
 
@@ -70,11 +66,11 @@ The _Histogram_ operator can be used to visualise the distribution of occurrence
 
 <img src="images/auf_dem_trockenen_14.png" width="50%" height="auto" alt="Histogram">
 
-To visualise the classified data, it is recommended to use the _Class Histogram_ operator, which translates the Ecosystem Atlas numbers into class names using the metadata.
+To visualise the classified data, it is recommended to use the _Class Histogram_ operator, which translates the IÖR land classification numbers into class names using the metadata.
 
 <img src="images/auf_dem_trockenen_15.png" width="50%" height="auto" alt="Class histogram">
 
-The plots then show the distribution of occurrences of _Calopteryx splendens_ as a function, firstly, of the average temperature on 1 January 2000 and, secondly, of the land-use classification of the Ecosystematlas.
+The plots then show the distribution of occurrences of _Calopteryx splendens_ as a function, firstly, of the average temperature on 1 January 2000 and, secondly, of the land-use classification of the IÖR Landklassifikation. Now the time selection menu at the top can be used to observe the change between the observation and the temperature and land use classification over the course of the year. But please note, that the land classification does not change over time, only the species occurrences. 
 
 <img src="images/auf_dem_trockenen_16.png" width="100%" height="auto" alt="Overview Calopteryx splendens final">
 
