@@ -31,12 +31,12 @@ Users can also open the data table to see more attributes of the occurrences.
 
 ![Multimedia items](media/abcd-spiders-2.png)
 
-Some ABCD datasets contain linkts to multimedia items.
+Some ABCD datasets contain links to multimedia items.
 These can be images, videos, or audio files.
 Users can click on the multimedia item in the data table to open it in a new dialog.
 For instance, when the item is an image, it will be displayed directly in the VAT system.
 
-The data table will show at most 3 links for clustered occurrences.
+The data table will show at most three links for clustered occurrences.
 As a users, you can zoom in to see more items.
 
 ## Citing the data
