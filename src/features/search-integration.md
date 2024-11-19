@@ -6,8 +6,9 @@ The VAT system provides a search integration with the [GFBio search](https://sea
 
 ![Visualizable in VAT](media/search-vis.png)
 
-To search for data, users can enter a search term in the search bar and press the `Enter` key. This will show the search results.
-Users can filter the search results by selecting the facet _Visualizable in VAT_.
+To search for data, users can enter a search term in the search bar and press the `Enter` key.
+This will show the search results.
+Users can filter the search results by selecting _Visualizable in VAT_ in the menu on the left side.
 This will show only the datasets that can be visualized in the VAT system.
 
 ## Search baskets
