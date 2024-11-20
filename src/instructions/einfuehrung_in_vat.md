@@ -70,11 +70,11 @@ First we go to the data selection menu and search for _Aeshna affinis_ in the GB
 
 <img src="images/einfuehrung_in_vat_13.png" width="50%" height="auto" alt="GBIF Search">
 
-**Warning:** Note that the GBIF data is spatio-temporal data. This means that a time period must be requested with an end date different from the start date.
+**Note:** GBIF data are spatio-temporal data. As the events occur at a specific point in time, it is recommended to select an appropriate time period. 
 
 <img src="images/einfuehrung_in_vat_14.png" width="50%" height="auto" alt="Minimum temperature search">
 
-Therefore, we need to change the time configuration in the respective menu by selecting a different end date, while we can also change the number of time steps according to the selected time period.
+Therefore, we need to change the time configuration in the respective menu by selecting a different end date, while we can also change the size of the time steps according to the selected time period.
 
 <img src="images/einfuehrung_in_vat_15.png" width="50%" height="auto" alt="Minimum temperature spatiotemporal extent">
 

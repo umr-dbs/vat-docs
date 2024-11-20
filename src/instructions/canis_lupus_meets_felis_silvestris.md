@@ -1,6 +1,6 @@
 # *Canis lupus* meets *Felis silvestris*
 
-**++ Currently, this examples is being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
+**++ Currently, this example is being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
 
 ## Video
 
@@ -12,7 +12,7 @@
 
 Welcome to the *Canis lupus* meets *Felis silvestris* use case.
 
-In this example the GBIF occurrence data of *Canis lupus* and *Felis silvestris* are cut to the extent of Germany and linked to the land use classification of the IÖR land use classification.
+In this example the GBIF occurrence data of *Canis lupus* and *Felis silvestris* are filtered to the extent of Germany and joined to the land use classification of the IÖR land use classification.
 
 <img src="images/canis_lupus_meets_felis_silvestris_1.png" width="100%" height="auto" alt="Introduction image VAT overview">
 
@@ -28,7 +28,7 @@ For the spatial selection we also need the German borders, which we found by sea
 
 <img src="images/canis_lupus_meets_felis_silvestris_4.png" width="50%" height="auto" alt="Germany search">
 
-In order to link the occurrence data with the land use classification, it is also necessary to load the _IÖR Landschaftsklassifikation_ by searching for it in the data catalogue. 
+In order to join the occurrence data with the land use classification, it is also necessary to load the _IÖR Landschaftsklassifikation_ by searching for it in the data catalogue. 
 
 <img src="images/canis_lupus_meets_felis_silvestris_5.png" width="50%" height="auto" alt="Oekosystematlas search">
 
@@ -42,7 +42,7 @@ Next, we join the raster data to the vector data using the _Raster Vector Join O
 
 <img src="images/canis_lupus_meets_felis_silvestris_7.png" width="50%" height="auto" alt="Raster Vector Join">
 
-The result is that the vector data is spatially linked to the raster data by position. Therefore, a new column is added to the vector data table containing the information. The float values are the result of the clustering calculating the mean of all integer encoded classes in classified data. This won't reflect in the downloaded data.
+The result is that the vector data is spatially joined to the raster data by position. Therefore, a new column is added to the vector data table containing the information from the raster/the raster value. The float values are the result of the clustering calculating the mean of all integer encoded classes in classified data. This won't reflect in the downloaded data.
 
 <img src="images/canis_lupus_meets_felis_silvestris_8.png" width="100%" height="auto" alt="Data table Canis lupus oekosystematlas">
 
