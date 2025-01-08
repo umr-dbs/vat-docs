@@ -80,7 +80,7 @@ In Jupyter Notebook, we can use the geoengine package to first initialise the VA
 
 <img src="images/vat_4_ml_15.png" alt="Jupyter Notebook code used to train the species distribution model">
 
-After model training we can import the prediction data workflow. The best RandomForestRegressor model is used for the final prediction
+After model training we can import the prediction data workflow. The best RandomForestRegressor model is used for the final prediction.
 
 <img src="images/vat_4_ml_16.png" alt="Jupyter Notebook code used to predict using the trained species distribution model">
 
