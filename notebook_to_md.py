@@ -61,6 +61,9 @@ def modify_markdown(body: str, outputs: List[Output]) -> str:
 
     modified_body = ""
     for body_line in body.splitlines():
+        # add a newline before and after pre blocks
+        body_line = body_line.replace("<pre>", "\n<pre>").replace("</pre>", "</pre>\n")
+
         if body_line.startswith('!['):
             # replace image links with data URIs
             for output in outputs:
