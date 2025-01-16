@@ -1,7 +1,5 @@
 # *Canis lupus* meets *Felis silvestris*
 
-**++ Currently, this example is being reworked after the latest update because GBIF behaves differently now. [Find out more](/updates/updates_and_changes.html). ++**
-
 ## Video
 
 <div style="text-align: center;">
